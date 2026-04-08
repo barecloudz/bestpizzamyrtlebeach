@@ -179,6 +179,12 @@ header img {
   align-items: start;
 }
 
+.featured-card-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .restaurant-logo {
   width: 200px;
   height: 200px;
@@ -317,6 +323,18 @@ header img {
   border-color: rgba(201, 168, 76, 0.4);
 }
 
+.pick-badge {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
 .pick-rank {
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
@@ -357,6 +375,187 @@ header img {
   font-size: 0.75rem;
   color: rgba(201, 168, 76, 0.5);
   letter-spacing: 0.05em;
+}
+
+/* ─── INTRO ───────────────────────────────────────── */
+.intro-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.intro-inner {
+  border-left: 2px solid var(--gold);
+  padding-left: 2rem;
+}
+
+.intro-inner p {
+  font-size: 1.05rem;
+  color: var(--light-gray);
+  line-height: 1.9;
+  font-style: italic;
+}
+
+/* ─── WHY SECTION ─────────────────────────────────── */
+.why-section {
+  background: rgba(201, 168, 76, 0.03);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+
+.why-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.why-item {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.why-icon {
+  color: var(--gold);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.why-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.why-item p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+/* ─── MENU SECTION ────────────────────────────────── */
+.menu-section {
+  padding: 5rem 2rem;
+}
+
+.menu-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.menu-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold-gradient);
+  opacity: 0.4;
+}
+
+.menu-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.menu-item p {
+  font-size: 0.83rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .why-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-inner {
+    padding-left: 1.25rem;
+  }
+}
+
+/* ─── FAQ ─────────────────────────────────────────── */
+.faq-section {
+  background: rgba(201, 168, 76, 0.03);
+  border-top: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+
+.faq-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.faq-answer strong {
+  color: var(--white);
+}
+
+.faq-answer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
 }
 
 /* ─── FOOTER ──────────────────────────────────────── */
